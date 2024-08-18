@@ -16,6 +16,7 @@ module.exports = {
     },
     colors: {
       'b1':'#1E293B',
+      'b2':'#475569',
       'b3':'#E4E4E7',
       'b4':'#FAFAFA',
       'b6': '#2E3192F3',
