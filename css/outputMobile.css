@@ -836,6 +836,21 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2\.5 {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -849,8 +864,20 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2\.5 {
+  margin-bottom: 2.5em;
+}
+
 .mb-20 {
   margin-bottom: 5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-4 {
@@ -917,6 +944,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.mt-2\.5 {
+  margin-top: 2.5em;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -949,12 +980,12 @@ video {
   margin-top: 2.25rem;
 }
 
-.mt-\[112px\] {
-  margin-top: 112px;
-}
-
 .mt-\[26px\] {
   margin-top: 26px;
+}
+
+.mb-\[160px\] {
+  margin-bottom: 160px;
 }
 
 .box-border {
@@ -1766,6 +1797,11 @@ video {
        column-gap: 1.25rem;
 }
 
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
 .gap-x-8 {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -2487,6 +2523,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
@@ -2499,6 +2540,10 @@ video {
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
 }
 
 .pb-8 {
@@ -3284,6 +3329,34 @@ video {
   font-display: swap;
 }
 
+*{
+  font-family: "IRANSansWeb500";
+}
+
+h1{
+  font-size: 18px;
+  font-family: "IRANSansWeb700";
+  line-height: 26px;
+}
+
+h2 , h3{
+  font-size: 16px;
+  font-family: "IRANSansWeb500";
+  line-height: 25px;
+}
+
+h4 , h5{
+  font-size: 14px;
+  font-family: "IRANSansWeb500";
+  line-height: 24px;
+}
+
+h6{
+  font-size: 12px;
+  font-family: "IRANSansWeb300";
+  line-height: 22px;
+}
+
 .collapse.show{
   visibility: visible;
 }
@@ -3559,6 +3632,165 @@ video {
 
 .swiper-button-disabled .arrowPath{
   opacity: 0.5;
+}
+
+.news .social-link path {
+  stroke: #2e3192;
+}
+
+.news .share__wrapper {
+  position: relative;
+}
+
+.news .social-link {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+}
+
+.news .share__wrapper {
+  /* top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.news .share__wrapper--open-left {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.news .toggle-button {
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.news .toggle-button:focus {
+  outline: 0;
+}
+
+.news .toggle-button:before,
+.news .toggle-button:after {
+  content: "";
+  position: absolute;
+}
+
+.news .toggle-button:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s ease;
+}
+
+.news .toggle-button--active:after {
+}
+
+.news .social-link {
+  visibility: hidden;
+  transition: all 0.1s ease;
+}
+
+.news .social-link:nth-child(1) {
+  left: -80px;
+}
+
+.news .social-link:nth-child(2) {
+  left: -40px;
+}
+
+.news .social-link:nth-child(3) {
+}
+
+.news .share__wrapper--active .social-link {
+  visibility: visible;
+  animation: 0.1s left forwards;
+}
+
+.news .share__wrapper--active .social-link:nth-child(1) {
+  animation-delay: 0.075s;
+}
+
+.news .share__wrapper--active .social-link:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+@keyframes shareClose {
+  0% {
+    opacity: 0;
+    transform: rotateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes left {
+  50% {
+    transform: translateX(-170%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-130%);
+  }
+}
+
+@keyframes right {
+  0% {
+    transform: translateX(-130%);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+    left: 0;
+  }
+}
+
+.news .para span{
+  font-family: "IRANSansWeb700";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  text-align: justify;
+}
+
+.pause {
+  opacity: 1;
+}
+
+.play {
+  opacity: 0;
+  display: none;
+}
+
+.relatedProjectScrollBar .swiper-scrollbar-drag{
+  background-color: #F26737;
+}
+
+.relatedProjectScrollBar{
+  width: 231px!important;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  height: 3px!important;
+  background-color: #BCBDBD;
 }
 
 @media (min-width: 480px) {
