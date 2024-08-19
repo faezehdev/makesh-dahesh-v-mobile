@@ -554,3 +554,15 @@ background-color: #BCBDBD;
 .catBox:hover h2{
 color: white;
 }
+
+.activeSchema {
+  transform: scaleY(1) !important;
+}
+
+.schemaList {
+  transition: 1s ease-out;
+}
+
+.swiper-button-disabled .disPath{
+opacity: 0.5;
+}
