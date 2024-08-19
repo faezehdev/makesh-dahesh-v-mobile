@@ -767,6 +767,10 @@ video {
   z-index: 1;
 }
 
+.z-\[1000\] {
+  z-index: 1000;
+}
+
 .z-\[100\] {
   z-index: 100;
 }
@@ -832,8 +836,21 @@ video {
   margin-right: auto;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .-mt-14 {
   margin-top: -3.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .mb-4 {
@@ -856,8 +873,16 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-9 {
   margin-bottom: 2.25rem;
+}
+
+.mb-\[116px\] {
+  margin-bottom: 116px;
 }
 
 .ml-auto {
@@ -882,6 +907,10 @@ video {
 
 .mt-14 {
   margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-2 {
@@ -920,12 +949,12 @@ video {
   margin-top: 2.25rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
+.mt-\[112px\] {
+  margin-top: 112px;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.mt-\[26px\] {
+  margin-top: 26px;
 }
 
 .box-border {
@@ -1043,12 +1072,20 @@ video {
   height: 129px;
 }
 
+.h-\[359px\] {
+  height: 359px;
+}
+
 .h-\[3px\] {
   height: 3px;
 }
 
 .h-\[45px\] {
   height: 45px;
+}
+
+.h-\[75px\] {
+  height: 75px;
 }
 
 .h-full {
@@ -1099,6 +1136,14 @@ video {
   width: 50%;
 }
 
+.w-\[50\.5vw\] {
+  width: 50.5vw;
+}
+
+.w-\[75px\] {
+  width: 75px;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -1117,6 +1162,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-\[825px\] {
@@ -1677,6 +1726,16 @@ video {
   gap: 2em;
 }
 
+.gap-x-0 {
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+}
+
+.gap-x-0\.5 {
+  -moz-column-gap: 0.125rem;
+       column-gap: 0.125rem;
+}
+
 .gap-x-1 {
   -moz-column-gap: 0.25rem;
        column-gap: 0.25rem;
@@ -1685,6 +1744,11 @@ video {
 .gap-x-2 {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
+}
+
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
 }
 
 .gap-x-24 {
@@ -2398,6 +2462,11 @@ video {
   padding-bottom: 3rem;
 }
 
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -2444,12 +2513,20 @@ video {
   padding-right: 1em;
 }
 
+.pr-\[3em\] {
+  padding-right: 3em;
+}
+
 .pt-7 {
   padding-top: 1.75rem;
 }
 
 .pt-\[1\.5em\] {
   padding-top: 1.5em;
+}
+
+.pt-\[3em\] {
+  padding-top: 3em;
 }
 
 .text-left {
@@ -2527,6 +2604,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -3167,6 +3249,41 @@ video {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "YekanBakh400";
+
+  src: url("../_fonts/YekanBakh-Regular.eot");
+
+  src: url("../_fonts/YekanBakh-Regular.eot?#iefix")
+        format("embedded-opentype"),
+      url("../_fonts/YekanBakh-Regular.woff") format("woff"),
+      url("../_fonts/YekanBakh-Regular.woff2") format("woff2"),
+      url("../_fonts/YekanBakh-Regular.ttf") format("truetype");
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "YekanBakh700";
+
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot");
+
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.eot?#iefix")
+        format("embedded-opentype"),
+      url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"),
+      url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 .collapse.show{
   visibility: visible;
 }
@@ -3523,6 +3640,10 @@ video {
 .before\:content-\[\'\'\]::before {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.last\:hidden:last-child {
+  display: none;
 }
 
 .hover\:origin-left:hover {
