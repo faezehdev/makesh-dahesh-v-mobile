@@ -297,10 +297,25 @@
                     
                     
             </span>
-             <video poster="" class="Main w-full object-cover mr-auto ml-auto scale-[1.2] duration-[.5s] 
-             [&.active]:scale-[1] [&.active]:opacity-[1] opacity-0 px-5
-             " src="@largeIMG" alt="@title" title="@title"></video> 
-            
+            <div class="inVideo flex items-center justify-center">
+
+                <video playsinline poster="" class="Main w-full object-cover mr-auto ml-auto scale-[1.2] duration-[.5s] 
+                [&.active]:scale-[1] [&.active]:opacity-[1] opacity-0 px-5
+                " src="@largeIMG" alt="@title" title="@title"></video> 
+                <div class="playbtn absolute">
+                    <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_344_3936)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.9994 0.110352C53.5664 0.110352 64.0394 4.79935 71.6204 12.3804C79.2004 19.9604 83.8894 30.4333 83.8894 42.0004C83.8894 53.5674 79.2004 64.0404 71.6204 71.6214C64.0394 79.2014 53.5664 83.8904 41.9994 83.8904C30.4324 83.8904 19.9594 79.2014 12.3784 71.6214C4.79837 64.0404 0.109375 53.5674 0.109375 42.0004C0.109375 30.4333 4.79837 19.9604 12.3794 12.3794C19.9594 4.79935 30.4324 0.110352 41.9994 0.110352ZM61.3534 43.7344C61.6574 43.5654 61.9204 43.3134 62.1064 42.9904C62.6534 42.0394 62.3254 40.8254 61.3744 40.2784L46.9784 31.9664L32.7484 23.7504C32.4224 23.5184 32.0234 23.3824 31.5934 23.3824C30.4914 23.3824 29.5984 24.2754 29.5984 25.3774V42.0004V58.6234H29.6064C29.6064 58.9594 29.6914 59.3004 29.8704 59.6133C30.4174 60.5644 31.6314 60.8924 32.5824 60.3454L46.9784 52.0334L61.3534 43.7344Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_344_3936">
+                        <rect width="84" height="84" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                </div>
+            </div>
 
              <span class="Gnext hover:cursor-pointer flex justify-center z-1 absolute left-0 items-center">
                 <svg class="rotate-180" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +338,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/swiper-bundle11.0.5.min.js"></script>
-
+    <script src="js/playVideo.js"></script>
     <script src="js/gallery video.js"></script>
     <script src="js/serviceShow.js"></script>
 </body>
