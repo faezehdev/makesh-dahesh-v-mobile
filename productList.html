@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/outputMobile.css">
 </head>
 <body>
-    <div class="productList">
+    <div class="productList overflow-hidden">
         <div class="section1 pt-[100px] bg-b7">
           
             <h1 class="text-2xl mb-4 mr-5 font-IRANSansWeb700 text-white" dir="rtl">
@@ -56,189 +58,26 @@
             </div>
         </div>
         <div class="section2 mt-0.5 border-t border-white bg-b7" dir="rtl">
-            <div class="flex px-5 gap-x-6">
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
+            <div class="external-dropdown">
+                <div class="outer h-[50px] items-center px-5 gap-x-6">
+                  <div class="side">
+                    <div class="dropdown">
+                      <button class="dropdown-toggle flex items-center justify-center gap-x-3 font-IRANSansWeb300 text-base text-white" type="button" data-toggle="dropdown">
+                        یرند 
+                        <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
+                            </svg>
+                            
+                    </button>
+                      <ul class="dropdown-menu pt-4 bg-b7" dir="rtl">
+                        <li class="mb-4"><a class="text-right font-IRANSansWeb300 text-sm text-white/[0.5]" href="#">HTML</a></li>
+                   
+                      </ul>
                     </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
+                  </div>
+        
                 </div>
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
-                    </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
-                    </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
-                    </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
-                    </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="schemas relative">
-                    <div class="flex h-[49px] items-center gap-x-4 cursor-pointer schTitle ">
-
-                        <span class="font-IRANSansWeb300 text-base text-white"> 
-                            برند
-                        </span>
-                        <div class="arrow">
-                            <svg width="21" height="11" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 0.75L10.5 10.25L20 0.75" stroke="white"/>
-                                </svg>
-                                
-                        </div>
-                    </div>
-                    <div class="schemaList duration-1000 scale-y-0 origin-top bg-b7 absolute w-max top-[120%] -right-[50%]">
-                        <ul class="pt-3 pr-5 pl-7">
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                            <li class="cursor-pointer mb-6 opacity-50 hover:opacity-100 duration-500">
-                                <p class="font-IRANSansWeb300 text-sm text-white">هواکش سانتریفیوژ</p>
-                            </li>
-                          
-                         
-                          
-                        </ul>
-                    </div>
-                </div>
-         
-            </div>
+              </div>
         </div>
         <div class="section3 " dir="rtl">
             <div class="listContainer mt-[110px] px-4 mb-[200px]">
@@ -266,6 +105,8 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/swiper-bundle11.0.6.min.js"></script>
 <script src="js/productList-mobile.js"></script>
 </body>
