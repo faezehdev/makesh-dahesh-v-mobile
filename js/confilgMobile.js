@@ -33,17 +33,7 @@ var host = {
         }
 }
 
-// Enable Scroll
 
-const lenis = new Lenis()
-
-
-function raf(time) {
-lenis.raf(time)
-requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
 function onSource(args) { 
   const captcha = document.querySelector("input[name='captcha']").value; 
   const captchaid = document.querySelector("input[name='captchaid']").value; 
@@ -123,7 +113,7 @@ document.querySelector('.main-container').classList.remove('SEND')
 }
 
 // SEARCH
-let sBTN = document.querySelector('.header .SearchIcon')
+let sBTN = document.querySelector('header .SearchIcon')
 let sCon = document.querySelector('.searchContainer')
 let sClose  = document.querySelector('.searchContainer .CloseSerch')
 sBTN.addEventListener('click',()=>{

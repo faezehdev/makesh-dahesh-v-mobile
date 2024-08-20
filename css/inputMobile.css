@@ -120,6 +120,16 @@
     line-height: 22px;
   }
 
+
+.ProjectShowMobile .swiper-pagination-progressbar-fill{
+  background-color: #F26737 !important;
+  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+}
+
 .collapse.show{
     visibility: visible;
   }
