@@ -1,7 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@font-face {
+  font-family: "IRANSansWebfanum";
+  src: url("../_fonts/IRANSansWeb(FaNum).eot");
+  src: url("../_fonts/IRANSansWeb(FaNum).eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum).woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWebfanum";
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
     font-family: "YekanBakh400";
@@ -525,6 +548,9 @@ text-align: justify;
 
 }
 
+.faNum {
+  font-family: "IRANSansWeb" !important;
+}
 
 .pause {
   opacity: 1;
@@ -828,4 +854,9 @@ opacity: 0.5;
 
 .productShow .Project:hover .Title-2 p{
 color: white;
+}
+
+
+.codeinputm{
+  background-color: transparent;
 }

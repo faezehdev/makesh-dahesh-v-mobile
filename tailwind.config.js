@@ -37,6 +37,8 @@ module.exports = {
       'IRANSansWeb400': ['IRANSansWeb400', 'IRANSansWeb400'],
       'IRANSansWeb500': ['IRANSansWeb500', 'IRANSansWeb500'],
       'IRANSansWeb700': ['IRANSansWeb700', 'IRANSansWeb700'],
+      'IRANSansWebfanum300': ['IRANSansWebfanum300', 'IRANSansWebfanum300'],
+      'IRANSansWebfanum400': ['IRANSansWebfanum400', 'IRANSansWebfanum400'],
       'YekanBakh400':[' YekanBakh400'],
       'YekanBakh700':[' YekanBakh700']
     },
