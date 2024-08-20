@@ -893,11 +893,9 @@ color: white;
 }
 
 
-<<<<<<< HEAD
 .codeinputm{
   background-color: transparent;
-=======
-
+}
 .brandpagination .swiper-pagination-bullet{
 width: 5px;
 height: 5px;
@@ -1014,5 +1012,4 @@ color: #FFFFFF80!important;
 .productList .side .dropdown-menu{
   transform: translateY(-5px);
   border: none;
->>>>>>> c665b987545315965fcc3137862c247d27cfa515
 }
