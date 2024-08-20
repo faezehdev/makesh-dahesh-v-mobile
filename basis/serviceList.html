@@ -1,0 +1,52 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209725"> <member name="serviceList" type="list" size="317x211" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.serviceList]"/> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لیست سرویس ها</title>
+    <meta name="description" content="لیست سریس های مکش دهش" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/outputMobile.css">
+</head>
+<body>
+    <div class="serviceList">
+        <div class="serviceContainer overflow-hidden px-5 mt-[148px]" dir="rtl">
+            <basis core="print" datamembername="db.serviceList">
+                <face>
+                    
+                    <div class="serviceBox mb-6">
+                        <div class="imgS px-3">
+                            <a href="/@link" title="@title">
+        
+                                <img class="w-full" src="/@00317X00211prp" alt="@title" title="@title">
+                            </a>
+                        </div>
+                        <div class="serviceDet z-1 bg-white p-3 shadow-[rgba(50,50,93,0.1)_0px_11px_21px_3px,_rgba(0,0,0,0.09)_0px_3px_7px_-3px]">
+                            <h1 class="font-IRANSansWeb700 text-base">
+                               @title
+                            </h1>
+                            <div class="para font-IRANSansWeb300 text-sm text-justify my-3">
+                                <p>
+                                    @substr
+                                </p>
+                            </div>
+                            <a href="/@link" title="@title"
+                            class="callBtn w-[141px] h-[47px] bg-b4 rounded-md justify-center flex items-center gap-x-1 z-1 mt-6">
+                            <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                            <p class="font-IRANSansWeb500 text-sm text-gray-500">
+                                مشاهده
+                            </p>
+                        </a>
+                        </div>
+                    </div>
+
+                </face>    
+            </basis>    
+        </div>
+    </div>
+    <script src="[##cms.cms.cdn##]/_js/gsap.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/new/js/serviceList-mobile.js"></script>
+</body>
+</html>

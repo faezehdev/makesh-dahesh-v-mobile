@@ -1,0 +1,51 @@
+.contactUS {
+  [data-bc-title-container] {
+    display: none;
+  }
+  [data-bc-part-container] {
+    width: 100%;
+  }
+  [data-bc-part] {
+    width: 100%;
+    margin: 0;
+  }
+  input , textarea{
+    background-color: transparent !important;
+    //styleName: 1-WEB;
+    font-family: "IRANSansWeb300" !important;
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 21.91px;
+    text-align: right;
+    border-radius: 0!important;
+    padding: 13px 0!important;
+    border: none!important;
+    border-bottom: 1px solid #1e1e1e!important;
+  }
+  .responsMsg1 {
+    display: none;
+  }
+  .captchaContainerclass {
+    display: flex;
+    align-items: center;
+    direction: ltr;
+    column-gap: 10px;
+    border-bottom: 1px solid #1E1E1E;
+    input{
+        background-color: transparent!important;
+        border-radius: none;
+        border: none!important;
+        font-family: "IRANSansWeb300" !important;
+        font-size: 14px !important;
+        font-weight: 300!important;
+        line-height: 21.91px!important;
+        text-align: right!important;
+        direction: rtl!important;
+    }
+    span.captcha-sefaresh{
+        padding: 0 8px;
+        border-left: 1px solid #1E1E1E;
+        border-right: 1px solid #1E1E1E;
+    }
+  }
+}

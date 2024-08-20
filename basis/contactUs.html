@@ -1,0 +1,305 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="5" usedforid="8479">
+    <member name="contactus" type="view" />
+</basis>
+
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تماس با ما</title>
+
+    <meta name="description" content="تماس با مکش دهش" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/leaflet.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/outputMobile.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/mobile-m-style.css">
+</head>
+
+<body>
+    <div class="contactUS">
+        <basis core="print" datamembername="db.contactus">
+            <layout>
+                <div class="section1" dir="rtl">
+
+                    <div class="mapSection">
+                        <div class="mapContainer w-full h-[359px]">
+                            @child
+                        </div>
+                    </div>
+                </div>
+            </layout>
+            <face filter="TypeID=246">
+                <div class="mapIn map h-full" id="map" data-x="@text" data-y="@largetext"></div>
+
+            </face>
+        </basis>
+        <div class="section2 px-5 mb-10" dir="rtl">
+            <div class="in2 ">
+                <div class="contactInfo">
+                    <h1 class=" mb-4 mt-10 font-IRANSansWeb700 text-b1 text-base">
+                        تماس با ما
+                    </h1>
+                    <basis core="print" datamembername="db.contactus">
+                        <layout>
+                            <div class="address font-IRANSansWeb300 text-sm text-b9">
+                                @child
+
+                            </div>
+                        </layout>
+
+                        <face filter="TypeID=244">
+                            @Answer
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.contactus">
+                        <layout>
+                            <ul class="flex items-center mt-6 gap-x-1 flex-wrap">
+                                @child
+                            </ul>
+                        </layout>
+
+                        <face filter="TypeID=240">
+
+                            <li class="font-IRANSansWeb300 text-sm text-b9">
+                                <a href="tel:@Answer" title="tel">
+                                    @Answer
+                                </a>
+                            </li>
+                            <li class="last:hidden">
+                                ,
+                            </li>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.contactus">
+                        <layout>
+                            <ul class="mt-6">
+
+                                @child
+                            </ul>
+                        </layout>
+
+                        <face filter="TypeID=242">
+
+                            <li>
+                                <a class="text-sm text-b9" href="mailto:@Answer">
+                                    @Answer
+                                </a>
+                            </li>
+                        </face>
+                    </basis>
+                    <!-- <div class="time mt-6">
+                        <p class="font-IRANSansWeb300 text-sm text-b9 ">
+                            شنبه تا چهارشنبه از ساعت 9 الی 17
+                        </p>
+                       </div> -->
+                    <a href="/نمایندگی-ها"
+                        class=" mt-6 cursor-pointer callBtn w-full h-[45px] bg-b4 rounded-md justify-center flex items-center gap-x-0.5">
+                        <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                        <p class="font-IRANSansWeb500 text-sm text-gray-500">نمایندگی ها </p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="qr py-6 bg-b4 flex items-center justify-center my-5">
+            <div class="imgS">
+                <img class="w-32" src="[##cms.cms.cdn##]/images/qrcode-c.png" alt="QRCode" title="QRCode">
+            </div>
+        </div>
+        <div class="section3 px-5" dir="rtl">
+            <div class="contactDetail mt-[26px]">
+
+                <h1 class="mt-7 mb-8 font-IRANSansWeb700 text-b1 text-base">
+                    فرم ارتباط با ما
+                </h1>
+
+
+
+                <form dir="rtl" name="myForm" class="mb-[116px] homeForm1" action="" onsubmit="return validateForm()"
+                    method="post">
+                    <basis core="schema" run="atclient"
+                        schemaUrl="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/FCF7F73C-1AA1-4EA4-9B9B-6288E593252B/fa/فرم-تماس-با-ما"
+                        displayMode="new" button="[data-btn-add1]" resultSourceId="demo.data1" onRendered="renderFn1">
+                    </basis>
+                    <basis core="callback" run="AtClient" triggers="demo.data1" method="onSource1"></basis>
+                    <basis core="api" url="/schema/domainform/CAF8D957-6EFB-4D19-A590-5BD254CD749D/fa/editobject"
+                        method="post" run="atclient"
+                        body="object_edit={##edit.object1.value##}&captcha={##edit.object1.captcha##}&captchaid={##edit.object1.captchaid##}"
+                        content-type="application/x-www-form-urlencoded" triggers="edit.object1" if="{##edit.object1##}"
+                        OnProcessed="OnProcessedEditObject1">
+                    </basis>
+                    <div data-bc-question="" class="qclass8">
+                        <div class="responsMsg1 responsMsg font-IRANSansWeb400 text-sm">
+                            <span>فرم با موفقیت ثبت شد.</span>
+                        </div>
+                        <div id="requestBox" class="captchaContainerclass captcha-sefaresh2" style="margin-bottom: 20px"
+                            data-bc-answer-container="" data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                            data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                            <basis core="dbsource" source="trust_login" name="captcha1" triggers="cms.reload1"
+                                run="atclient">
+                                <member name="code1" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha1.code1" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template">
+                                        <img src="[##cms.cms.cdn##]/images/reload.png" class="refressh refressh1" run="atclient" bc-triggers="click" bc-name="cms.reload1" />
+
+                          <span class="captcha-sefaresh">
+                              <img src="/@captcha@" width="88" height="44" class="captcha-sefaresh"
+                                  alt="captcha" title="captcha" />
+                              <input type="hidden" name="captchaid" value="@captcha@" />
+                          </span>
+                      <input type="text" class="codeinputm" name="captcha"
+                          placeholder="کد امنیتی را وارد کنید" />
+                    </script>
+                                </face>
+                            </basis>
+                        </div>
+
+                        <button type="submit" data-btn-add1 data-btn-submit=""
+                            class="subBtn cursor-pointer callBtn w-full h-[45px] bg-b4 rounded-md justify-center flex items-center gap-x-5">
+                            <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                            <p class="font-IRANSansWeb500 text-sm text-gray-500"> مشاهده</p>
+                        </button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.30.0.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/alasql.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/leaflet.js"></script>
+
+    <script>
+        var host = { debug: !1, settings: { "connection.web.trust_login": "https://basispanel.ir/apicms", "connection.web.basiscore": "https://basispanel.ir/apicms", "connection.web.media": "https://basispanel.ir/apicms", "default.dbsource.verb": "post", "default.call.verb": "get", "default.viewCommand.groupColumn": "prpid", "default.dmnid": "4086", "default.binding.regex": "\\{##([^#]*)##\\}" } };
+        function onSource1(args) {
+            console.log("onSource");
+            const captcha = document.querySelector(
+                ".homeForm1 #requestBox input[name='captcha']"
+            ).value;
+            const captchaid = document.querySelector(
+                ".homeForm1 #requestBox input[name='captchaid']"
+            ).value;
+            const stringJson = JSON.stringify(args.source?.rows[0]);
+            console.log("stringJson", stringJson);
+            $bc.setSource("edit.object1", {
+                value: stringJson,
+                captcha: captcha,
+                captchaid: captchaid,
+            });
+        }
+
+        let responsMsg = document.querySelector(".responsMsg1");
+        let responsMsgIn = document.querySelector(".responsMsg1 span");
+
+        async function OnProcessedEditObject1(args) {
+            console.log("OnProcessedEditObject1");
+            const response = args.response;
+            const json = await response.json();
+
+            if (json.errorid == 6) {
+                console.log(json);
+                responsMsgIn.innerHTML = "فرم با موفقیت ثبت شد.";
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+            if (json.errorid == 4) {
+                console.log(json);
+                responsMsgIn.innerHTML = "لطفا کپچا را به درستی وارد کنید.";
+
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+        }
+
+        function renderFn1(params) {
+
+            let mapDiv = document.querySelector(".mapIn");
+            let xLatcontact = mapDiv.getAttribute("data-x");
+            let yLatContact = mapDiv.getAttribute("data-y");
+
+            var map = L.map("map", {
+                center: [yLatContact, xLatcontact], zoom: 15
+            }
+            ),
+                Contact = new L.tileLayer(
+                    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    {
+                        // attribution:
+                        // '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                        minZoom: "10",
+                    }
+                ).addTo(map);
+
+
+
+            greenIconContact = L.icon({ iconUrl: "images/location.png", iconSize: [29, 34] });
+            markerContact = L.marker([yLatContact, xLatcontact], { icon: greenIconContact });
+            markerContact.addTo(map);
+
+
+
+            let questions = document.querySelectorAll(
+                ".homeForm1 div[data-bc-question]"
+            );
+
+            questions.forEach((element) => {
+                let title = element.querySelector(
+                    ".homeForm1 [data-bc-question-title]"
+                );
+                let qInput = element.querySelector(".homeForm1 input");
+                let qTxtArea = element.querySelector(".homeForm1 textarea");
+                if (title) {
+                    title = element.querySelector(
+                        ".homeForm1 [data-bc-question-title]"
+                    ).innerHTML;
+                    if (qInput) {
+                        qInput.setAttribute("placeholder", title);
+                    } else if (qTxtArea) {
+                        qTxtArea.setAttribute("placeholder", title);
+                    }
+                }
+                console.log("q", qInput);
+
+
+            });
+       
+            let subBtn = document.querySelector(".subBtn");
+            let codeinputm = document.querySelector(".codeinputm")
+            subBtn.addEventListener("click" , function (params) {
+                if (questions[0].querySelector("input").value=="" ) {
+                    responsMsgIn.innerHTML = "لطفا فیلدهای ضرروری را پر کنید.";
+                responsMsg.style.display = "block";
+
+                setTimeout(() => {
+                    responsMsg.style.display = "none";
+                }, 2000);
+            }
+            else if(codeinputm.value==""){
+
+                responsMsgIn.innerHTML = "لطفا کپچا را وارد کنید.";
+            responsMsg.style.display = "block";
+    
+            setTimeout(() => {
+                responsMsg.style.display = "none";
+            }, 2000);
+            }
+            })
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1408651"> <member name="brands" type="view"/> </basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="1408651"> <member name="brandsGallery" type="list" format="4"/> </basis>	
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="1408651"> <member name="relatedProduct" type="list" blgid="221" size="260x260"/> </basis>
+
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
+    <member request="json-ld" type="scalar" name="fq" /> 
+   </basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <basis core="print" datamembername="db.seolist">
+        <face>
+            <title>[##cms.seo.title|db.seolist.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/outputMobile.css" />
+</head>
+
+<body>
+    <div class="brandShow">
+        <basis core="print" datamembername="db.brandsGallery">
+            <layout>
+                <div class="section1 flex items-center justify-center relative">
+                    <div class="imgS w-full h-svh overflow-hidden">
+                        @child
+                    </div>
+                    
+             
+                    <div class="scrollD absolute left-0 bottom-5 right-0">
+                        <span class="mouse">
+                            <span class="move"></span>
+                        </span>
+                    </div>
+                    <a href="/تماس-با-فروشگاه-مکش-و-دهش"
+                        class="callBtn w-[108px] h-[45px] bg-b4 rounded-md justify-center absolute right-5 bottom-5 flex items-center gap-x-1">
+                        <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                        <p class="font-IRANSansWeb500 text-sm text-gray-500">تماس</p>
+                    </a>
+                </div>
+           
+            </layout>
+            <face filter="ord=50">
+                       
+                <img class="w-full h-full brightness-[0.8]" src="/@largeIMG"
+                alt="@name" title="@name" />
+            </face>
+        </basis>
+        <div class="section2 mt-10 px-5" dir="rtl">
+            <basis core="print" datamembername="db.brands">
+                <face filter="TypeID=150">
+                    <h1 class="mb-4 text-base font-IRANSansWeb700">
+                    @Answer     
+                    </h1>
+                    
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.brands">
+                <layout>
+                    <div class="para font-IRANSansWeb300 text-sm text-justify">
+                      
+                        @child
+                    </div>
+                </layout>
+   
+                <face filter="TypeID=129">
+                    @Answer
+                </face>
+            </basis>
+        </div>
+        <basis core="print" datamembername="db.relatedProduct">
+            <layout>
+                <div class="section3 mb-40 pt-7 pb-4 mt-10 bg-b4" dir="rtl">
+                    <div class="mainTitle justify-center px-5 flex items-center gap-x-8">
+                        <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.8886 6.26613V1.81133C24.8886 1.42493 24.575 1.11133 24.1886 1.11133H19.7338V2.51133H22.4988L21.9122 3.09793C21.418 3.59073 20.7992 3.94073 20.123 4.11013L19.836 4.18153C18.31 4.56373 17.1816 5.81673 16.959 7.37213L16.8134 8.39413L16.6678 9.41613C16.5264 10.4059 15.8082 11.2025 14.8352 11.4461L14.5496 11.5175C13.6256 11.7485 12.7814 12.2259 12.1094 12.8979L13.1006 13.8877C13.5934 13.3935 14.2108 13.0435 14.8898 12.8741L15.174 12.8027C16.7 12.4219 17.8284 11.1689 18.0524 9.61353L18.198 8.59153L18.345 7.57093C18.4864 6.57973 19.2046 5.78313 20.1762 5.53953L20.4632 5.46813C21.3844 5.23713 22.2286 4.76113 22.902 4.08773L23.4886 3.50113V6.26613H24.8886Z" fill="#BCBDBD"/>
+                            <path d="M13.8886 6.26613V1.81133C13.8886 1.42493 13.575 1.11133 13.1886 1.11133H8.73378V2.51133H11.4988L10.9122 3.09793C10.418 3.59073 9.79918 3.94073 9.12297 4.11013L8.83598 4.18153C7.30998 4.56373 6.18157 5.81673 5.95897 7.37213L5.81337 8.39413L5.66777 9.41613C5.52637 10.4059 4.80817 11.2025 3.83517 11.4461L3.54957 11.5175C2.62557 11.7485 1.78137 12.2259 1.10938 12.8979L2.10057 13.8877C2.59337 13.3935 3.21077 13.0435 3.88977 12.8741L4.17397 12.8027C5.69998 12.4219 6.82837 11.1689 7.05237 9.61353L7.19797 8.59153L7.34497 7.57093C7.48637 6.57973 8.20458 5.78313 9.17618 5.53953L9.46317 5.46813C10.3844 5.23713 11.2286 4.76113 11.902 4.08773L12.4886 3.50113V6.26613H13.8886Z" fill="#BCBDBD"/>
+                            </svg>
+                            
+        
+                        <h1 class="font-IRANSansWeb700 text-xl text-b12"> محصولات این برند</h1>
+                        <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.8886 6.26613V1.81133C24.8886 1.42493 24.575 1.11133 24.1886 1.11133H19.7338V2.51133H22.4988L21.9122 3.09793C21.418 3.59073 20.7992 3.94073 20.123 4.11013L19.836 4.18153C18.31 4.56373 17.1816 5.81673 16.959 7.37213L16.8134 8.39413L16.6678 9.41613C16.5264 10.4059 15.8082 11.2025 14.8352 11.4461L14.5496 11.5175C13.6256 11.7485 12.7814 12.2259 12.1094 12.8979L13.1006 13.8877C13.5934 13.3935 14.2108 13.0435 14.8898 12.8741L15.174 12.8027C16.7 12.4219 17.8284 11.1689 18.0524 9.61353L18.198 8.59153L18.345 7.57093C18.4864 6.57973 19.2046 5.78313 20.1762 5.53953L20.4632 5.46813C21.3844 5.23713 22.2286 4.76113 22.902 4.08773L23.4886 3.50113V6.26613H24.8886Z" fill="#BCBDBD"/>
+                            <path d="M13.8886 6.26613V1.81133C13.8886 1.42493 13.575 1.11133 13.1886 1.11133H8.73378V2.51133H11.4988L10.9122 3.09793C10.418 3.59073 9.79918 3.94073 9.12297 4.11013L8.83598 4.18153C7.30998 4.56373 6.18157 5.81673 5.95897 7.37213L5.81337 8.39413L5.66777 9.41613C5.52637 10.4059 4.80817 11.2025 3.83517 11.4461L3.54957 11.5175C2.62557 11.7485 1.78137 12.2259 1.10938 12.8979L2.10057 13.8877C2.59337 13.3935 3.21077 13.0435 3.88977 12.8741L4.17397 12.8027C5.69998 12.4219 6.82837 11.1689 7.05237 9.61353L7.19797 8.59153L7.34497 7.57093C7.48637 6.57973 8.20458 5.78313 9.17618 5.53953L9.46317 5.46813C10.3844 5.23713 11.2286 4.76113 11.902 4.08773L12.4886 3.50113V6.26613H13.8886Z" fill="#BCBDBD"/>
+                            </svg>
+                            
+                    </div>
+        
+                    <div class="sliderSwction relative mt-10">
+                        <div class="swiper px-5 relatedPro py-5">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                           
+                          @child
+                            </div>
+                        </div>
+                        <div class="btnsss flex justify-center">
+        
+                            <div class="nextProBtn cursor-pointer">
+                                <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" fill="#2E3192"/>
+                                    <path class="arrowPath" d="M14.7583 9.29297L26.2383 20.773L14.7583 32.253" stroke="white" stroke-width="1.64"/>
+                                    </svg>
+                                    
+                            </div>
+                            <div class="prevProBtn cursor-pointer">
+                                <svg class="rotate-180 " width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="41" height="41" fill="#2E3192"/>
+                                    <path class="arrowPath" d="M14.7583 9.29297L26.2383 20.773L14.7583 32.253" stroke="white" stroke-width="1.64"/>
+                                    </svg>
+                                    
+                                
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </layout>
+            <face>
+                <div class="swiper-slide bg-white duration-500">
+                    <div class="proBox px-8 pb-8">
+                        <a href="/@link" title="@title" class="text-center">
+                            <div class="imgS -mt-14 flex items-center justify-center">
+                                <img src="/@00260X00260prp"
+                                    alt="@title" title="@title" />
+                            </div>
+                            <div class="name">
+                                <p class="font-IRANSansWeb500 text-sm mt-7">
+                                    @title 
+                                </p>
+                            </div>
+                        </a>
+
+                        <a href="/@link"
+                            class="mt-4 mx-auto callBtn duration-1000 w-[128px] h-[45px] bg-b4 rounded-md justify-center right-20 bottom-5 flex items-center gap-x-1">
+                            <span class="w-3 h-3 bg-b8 rounded-full block"></span>
+                            <p class="font-IRANSansWeb500 text-sm text-gray-500">
+                                مشاهده
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </face>
+        </basis>
+    </div>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.5.min.js"></script>
+    <script src="[##cms.cms.cdn##]/new/js/brand-mobile.js"></script>
+    <script type="application/ld+json"> 
+        [##json.fq.column1##] 
+        </script>
+</body>
+
+</html>

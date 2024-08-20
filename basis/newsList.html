@@ -1,0 +1,94 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653"> <member name="articleList" type="list" size="300x200" perpage="200" link="article.bc" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.articleList]"/> </basis>	
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاگ</title>
+    <meta name="description" content="بلاگ مکش دهش" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/new/css/outputMobile.css">
+</head>
+<body>
+    <div class="newsList">
+        <div class="mainTitle mt-20 justify-center px-5 flex items-center gap-x-8">
+            <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.8886 6.26613V1.81133C24.8886 1.42493 24.575 1.11133 24.1886 1.11133H19.7338V2.51133H22.4988L21.9122 3.09793C21.418 3.59073 20.7992 3.94073 20.123 4.11013L19.836 4.18153C18.31 4.56373 17.1816 5.81673 16.959 7.37213L16.8134 8.39413L16.6678 9.41613C16.5264 10.4059 15.8082 11.2025 14.8352 11.4461L14.5496 11.5175C13.6256 11.7485 12.7814 12.2259 12.1094 12.8979L13.1006 13.8877C13.5934 13.3935 14.2108 13.0435 14.8898 12.8741L15.174 12.8027C16.7 12.4219 17.8284 11.1689 18.0524 9.61353L18.198 8.59153L18.345 7.57093C18.4864 6.57973 19.2046 5.78313 20.1762 5.53953L20.4632 5.46813C21.3844 5.23713 22.2286 4.76113 22.902 4.08773L23.4886 3.50113V6.26613H24.8886Z" fill="#BCBDBD"/>
+                <path d="M13.8886 6.26613V1.81133C13.8886 1.42493 13.575 1.11133 13.1886 1.11133H8.73378V2.51133H11.4988L10.9122 3.09793C10.418 3.59073 9.79918 3.94073 9.12297 4.11013L8.83598 4.18153C7.30998 4.56373 6.18157 5.81673 5.95897 7.37213L5.81337 8.39413L5.66777 9.41613C5.52637 10.4059 4.80817 11.2025 3.83517 11.4461L3.54957 11.5175C2.62557 11.7485 1.78137 12.2259 1.10938 12.8979L2.10057 13.8877C2.59337 13.3935 3.21077 13.0435 3.88977 12.8741L4.17397 12.8027C5.69998 12.4219 6.82837 11.1689 7.05237 9.61353L7.19797 8.59153L7.34497 7.57093C7.48637 6.57973 8.20458 5.78313 9.17618 5.53953L9.46317 5.46813C10.3844 5.23713 11.2286 4.76113 11.902 4.08773L12.4886 3.50113V6.26613H13.8886Z" fill="#BCBDBD"/>
+                </svg>
+                
+
+            <h1 class="font-IRANSansWeb700 text-xl text-b12">
+                بلاگ
+                
+                </h1>
+            <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.8886 6.26613V1.81133C24.8886 1.42493 24.575 1.11133 24.1886 1.11133H19.7338V2.51133H22.4988L21.9122 3.09793C21.418 3.59073 20.7992 3.94073 20.123 4.11013L19.836 4.18153C18.31 4.56373 17.1816 5.81673 16.959 7.37213L16.8134 8.39413L16.6678 9.41613C16.5264 10.4059 15.8082 11.2025 14.8352 11.4461L14.5496 11.5175C13.6256 11.7485 12.7814 12.2259 12.1094 12.8979L13.1006 13.8877C13.5934 13.3935 14.2108 13.0435 14.8898 12.8741L15.174 12.8027C16.7 12.4219 17.8284 11.1689 18.0524 9.61353L18.198 8.59153L18.345 7.57093C18.4864 6.57973 19.2046 5.78313 20.1762 5.53953L20.4632 5.46813C21.3844 5.23713 22.2286 4.76113 22.902 4.08773L23.4886 3.50113V6.26613H24.8886Z" fill="#BCBDBD"/>
+                <path d="M13.8886 6.26613V1.81133C13.8886 1.42493 13.575 1.11133 13.1886 1.11133H8.73378V2.51133H11.4988L10.9122 3.09793C10.418 3.59073 9.79918 3.94073 9.12297 4.11013L8.83598 4.18153C7.30998 4.56373 6.18157 5.81673 5.95897 7.37213L5.81337 8.39413L5.66777 9.41613C5.52637 10.4059 4.80817 11.2025 3.83517 11.4461L3.54957 11.5175C2.62557 11.7485 1.78137 12.2259 1.10938 12.8979L2.10057 13.8877C2.59337 13.3935 3.21077 13.0435 3.88977 12.8741L4.17397 12.8027C5.69998 12.4219 6.82837 11.1689 7.05237 9.61353L7.19797 8.59153L7.34497 7.57093C7.48637 6.57973 8.20458 5.78313 9.17618 5.53953L9.46317 5.46813C10.3844 5.23713 11.2286 4.76113 11.902 4.08773L12.4886 3.50113V6.26613H13.8886Z" fill="#BCBDBD"/>
+                </svg>
+                
+        </div>
+
+        <div class="filters mt-6 bg-b4" dir="rtl">
+            <ul class="flex items-stretch h-[47px]">
+                <li data-project="/load-news.inc?catid=25653&refresh=true" class="filterBtn flex items-center justify-center w-full text-center duration-500">
+                    <p class="font-IRANSansWeb700 text-sm text-gray-500">
+                        مقالات
+                    </p>
+                </li>
+             
+                <li data-project="/load-news.inc?catid=56721&refresh=true" class="filterBtn flex items-center justify-center w-full text-center duration-500 ">
+                    <p class="font-IRANSansWeb700 text-sm text-gray-500">
+                        اخبار
+                    </p>
+                </li>
+             
+            </ul>
+        </div>
+
+        <div class="newsContainer mt-8 px-5" dir="rtl">
+            <basis core="print" datamembername="db.articleList">
+                <else-layout>
+                    <div class="para px-5 text-center font-IRANSansWeb400 text-sm" dir="rtl">
+                        <p>
+                            متاسفانه مقاله ای موجود نیست.
+                        </p>
+                      </div>
+                </else-layout>
+                <face>
+                    
+                    <div class="mb-2.5 newsBox shadow-[0_8px_30px_rgb(0,0,0,0.12)] duration-1000 pt-6 pr-5 pb-7 pl-2">
+                        <div class="imgS relative flex overflow-hidden">
+                            <a class="w-full" href="/@link" title="@title">
+                                <img class="w-full" src="/@00300X00200prp" alt="@title"
+                                    title="@title" />
+                                <img class="absolute inset-0 opacity-0 w-full h-full z-1 duration-500" src="/@00300X00200prp" alt="@title"
+                                    title="@title" />
+                            </a>
+                            <div class="date">
+                                <span
+                                    class="font-IRANSansWeb400 text-xs [writing-mode:vertical-lr] text-b9 rotate-180">
+                                  @date
+                                </span>
+                            </div>
+                        </div>
+                        <div class="newsTitle py-3 pl-5">
+                            <a href="/@link" title="@title" class="font-IRANSansWeb400 text-sm">
+                             @title
+                            </a>
+                        </div>
+                        <div class="newsDetail pl-5 font-IRANSansWeb400 text-justify text-sm text-gray-500">
+                            <p>
+                               @substr
+                            </p>
+                        </div>
+                    </div>
+                </face>
+            </basis>
+      
+        </div>
+    </div>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.7.1.min.js"></script>
+    <script src="[##cms.cms.cdn##]/new/js/newsList-mobile.js"></script>
+</body>
+</html>

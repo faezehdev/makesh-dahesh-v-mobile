@@ -1,0 +1,86 @@
+<basis core="group" if="'[##cms.query.catid##]' = '25653'">
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="25653"> <member name="articleList" type="list" size="300x200" perpage="200" link="article.bc" propertyid="7244" postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.articleList]"/> </basis>	
+
+    <basis core="print" datamembername="db.articleList">
+        <else-layout>
+            <div class="para px-5 text-center font-IRANSansWeb400 text-sm" dir="rtl">
+                <p>
+                    متاسفانه مقاله ای موجود نیست.
+                </p>
+              </div>
+        </else-layout>
+        <face>
+            
+            <div class="mb-2.5 newsBox shadow-[0_8px_30px_rgb(0,0,0,0.12)] duration-1000 pt-6 pr-5 pb-7 pl-2">
+                <div class="imgS relative flex overflow-hidden">
+                    <a class="w-full" href="/@link" title="@title">
+                        <img class="w-full" src="/@00300X00200prp" alt="@title"
+                            title="@title" />
+                        <img class="absolute inset-0 opacity-0 w-full h-full z-1 duration-500" src="/@00300X00200prp" alt="@title"
+                            title="@title" />
+                    </a>
+                    <div class="date">
+                        <span
+                            class="font-IRANSansWeb400 text-xs [writing-mode:vertical-lr] text-b9 rotate-180">
+                          @date
+                        </span>
+                    </div>
+                </div>
+                <div class="newsTitle py-3 pl-5">
+                    <a href="/@link" title="@title" class="font-IRANSansWeb400 text-sm">
+                     @title
+                    </a>
+                </div>
+                <div class="newsDetail pl-5 font-IRANSansWeb400 text-justify text-sm text-gray-500">
+                    <p>
+                       @substr
+                    </p>
+                </div>
+            </div>
+        </face>
+    </basis>
+</basis>
+
+<basis core="group" if="'[##cms.query.catid##]' = 56721">
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="56721"> <member name="newsList" type="list" size="300x200" link="news.bc" propertyid="8191" postsql=" select *, SUBSTR(prp_8191, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_8191, 1, 100)))) || '...' as substr from [db.newsList]"/> </basis>	
+    <basis core="print" datamembername="db.newsList">
+        <else-layout>
+            <div class="para px-5 text-center font-IRANSansWeb400 text-sm" dir="rtl">
+                <p>
+                    متاسفانه مقاله ای موجود نیست.
+                </p>
+              </div>
+        </else-layout>
+        <face>
+            
+            <div class="mb-2.5 newsBox shadow-[0_8px_30px_rgb(0,0,0,0.12)] duration-1000 pt-6 pr-5 pb-7 pl-2">
+                <div class="imgS relative flex overflow-hidden">
+                    <a class="w-full" href="/@link" title="@title">
+                        <img class="w-full" src="/@00300X00200prp" alt="@title"
+                            title="@title" />
+                        <img class="absolute inset-0 opacity-0 w-full h-full z-1 duration-500" src="/@00300X00200prp" alt="@title"
+                            title="@title" />
+                    </a>
+                    <div class="date">
+                        <span
+                            class="font-IRANSansWeb400 text-xs [writing-mode:vertical-lr] text-b9 rotate-180">
+                          @date
+                        </span>
+                    </div>
+                </div>
+                <div class="newsTitle py-3 pl-5">
+                    <a href="/@link" title="@title" class="font-IRANSansWeb400 text-sm">
+                     @title
+                    </a>
+                </div>
+                <div class="newsDetail pl-5 font-IRANSansWeb400 text-justify text-sm text-gray-500">
+                    <p>
+                       @substr
+                    </p>
+                </div>
+            </div>
+        </face>
+    </basis>
+</basis>
+
+
